@@ -8,7 +8,7 @@ lines of text that are used to define logic rules can be displayed to the client
 
 Aristotle is loosely inspired by cucumber. Check out the examples below.
 
-We're at version 0.0.3 now, so all contributions are very welcome! Most appreciated are unit tests and code cleanups.
+We're at an early alpha version, so all contributions are very welcome! Most appreciated are unit tests and code cleanups.
 
 Aristotle grew out of the need we had at [Apprentus](https://www.apprentus.com/) to define and remember the ever increasing
 complexity with sorting and managing incoming requests from students.
