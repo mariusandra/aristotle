@@ -105,6 +105,7 @@ class Request < ActiveRecord::Base
   def update_state
     RequestLogic.new(self).process 'Update the request state'
   end
+end
 ```
 
 ### Displaying rules
