@@ -24,7 +24,7 @@ Create a folder `app/logic` and place inside files like:
 
 `app/logic/request.logic`
 
-```
+```ruby
 Update the request state
 
   Do nothing if the state was manually changed
@@ -35,7 +35,7 @@ Update the request state
 
 `app/logic/request_logic.rb`
 
-```
+```ruby
 class RequestLogic < Aristotle::Logic
   # conditions
   condition /the state was manually changed/ do |request|
@@ -98,13 +98,21 @@ end
 
 To use the logic in your own models and controllers, do this:
 
-```
+```ruby
 class Request < ActiveRecord::Base
   before_save :update_state
 
   def update_state
     RequestLogic.new(self).process 'Update the request state'
   end
+```
+
+### Displaying rules
+
+To display a nice HTML version of the rules (e.g. in your admin interface for the client), run:
+
+```ruby
+RequestLogic.html_rules
 ```
 
 ## Contributions
