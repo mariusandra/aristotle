@@ -117,6 +117,7 @@ To display a nice HTML version of the rules (e.g. in your admin interface for th
 RequestLogic.html_rules
 ```
 
+Here's an example. The box around is made by [activeadmin](http://activeadmin.info/).
 
 ![Aristotle rules example](http://mariusandra.com/files/aristotle/aristotle-rules.png)
 
