@@ -117,6 +117,9 @@ To display a nice HTML version of the rules (e.g. in your admin interface for th
 RequestLogic.html_rules
 ```
 
+
+![Aristotle rules example](http://mariusandra.com/files/aristotle/aristotle-rules.png)
+
 ## Contributions
 
 All contributions are very welcome! This is an alpha release of the code.
