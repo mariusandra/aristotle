@@ -111,7 +111,7 @@ RequestLogic.html_rules(show_code: true)
 
 Here's an example. The box around is made by [activeadmin](http://activeadmin.info/).
 
-![Aristotle rules example](http://mariusandra.com/files/aristotle/aristotle-rules.png)
+![Aristotle rules example](http://mariusandra.com/files/aristotle/aristotle-rules-3.png)
 
 ## Contributions
 
