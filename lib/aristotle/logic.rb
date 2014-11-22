@@ -122,12 +122,10 @@ module Aristotle
       not_covered == {}
     end
 
+    protected
+
     def self.logic_name
       self.to_s.gsub(/Logic$/, '').gsub(/([a-z])([A-Z])/, '\1_\2').downcase
-    end
-
-    def self.descendants
-      ObjectSpace.each_object(Class).select { |klass| klass < self }
     end
   end
 end
