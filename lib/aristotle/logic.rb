@@ -47,11 +47,7 @@ module Aristotle
           raise "#{filename} is broken!" if command.nil?
 
           @@commands[command] ||= []
-          # begin
           @@commands[command] << Aristotle::Command.new(line.strip, @@conditions, @@actions)
-          # rescue => e
-          #   raise e.message + ' in ' + filename
-          # end
         else
           command = line
         end

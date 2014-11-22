@@ -60,16 +60,8 @@ class RequestLogic < Aristotle::Logic
   action /Do nothing/ do |request|
   end
 
-  action /Move to 'failed'/ do |request|
-    request.state = :failed
-  end
-
-  action /Move to 'to_do'/ do |request|
-    request.state = :to_do
-  end
-
-  action /Move to 'deleted'/ do |request|
-    request.state = :deleted
+  action /Move to '([a-z_]+)'/ do |request, folder|
+    request.state = folder.to_sym
   end
 end
 ```

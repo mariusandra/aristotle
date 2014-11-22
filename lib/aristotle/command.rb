@@ -3,18 +3,30 @@ module Aristotle
     attr_reader :action, :condition
 
     def initialize(line, conditions, actions)
-      # TODO: make this properly work with regexps
       @action, @condition = line.split(' if ', 2).map(&:strip)
 
       raise 'Badly formatted line' if @action == '' || @condition == ''
 
-      @condition_proc = conditions[Regexp.new(@condition)]
-      @action_proc = actions[Regexp.new(@action)]
+      conditions.each do |condition_regexp, condition_proc|
+        match_data = condition_regexp.match(@condition)
+        if match_data
+          @condition_proc = condition_proc
+          @condition_attributes = match_data.to_a[1..-1]
+        end
+      end
+
+      actions.each do |action_regexp, action_proc|
+        match_data = action_regexp.match(@action)
+        if match_data
+          @action_proc = action_proc
+          @action_attributes = match_data.to_a[1..-1]
+        end
+      end
     end
 
     def do_action_with(object)
       if @action_proc
-        @action_proc.call(object)
+        @action_proc.call(object, *@action_attributes)
       else
         raise "Action not found: #{@action}"
       end
@@ -22,7 +34,7 @@ module Aristotle
 
     def condition_passes_with?(object)
       if @condition_proc
-        @condition_proc.call(object)
+        @condition_proc.call(object, *@condition_attributes)
       else
         raise "Condition not found: #{@condition}"
       end
