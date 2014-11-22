@@ -6,9 +6,7 @@ Aristotle is a simple business logic engine for Ruby. It's design goal is to sto
 Aristotle achieves this by removing the line between business logic definitions and code. The same
 lines of text that are used to define logic rules can be displayed to the client without modification.
 
-Aristotle is loosely inspired by cucumber. Check out the examples below.
-
-We're at an early alpha version, so all contributions are very welcome! Most appreciated are unit tests and code cleanups.
+Aristotle is loosely inspired by cucumber. Check out the examples and screenshot below.
 
 Aristotle grew out of the need we had at [Apprentus](https://www.apprentus.com/) to define and remember the ever increasing
 complexity with sorting and managing incoming requests from students.
@@ -115,4 +113,4 @@ Here's an example. The box around is made by [activeadmin](http://activeadmin.in
 
 ## Contributions
 
-All contributions are very welcome! This is an alpha release of the code.
+All contributions are very welcome!
