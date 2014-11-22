@@ -106,7 +106,7 @@ end
 To display a nice HTML version of the rules (e.g. in your admin interface for the client), run:
 
 ```ruby
-RequestLogic.html_rules
+RequestLogic.html_rules(show_code: true)
 ```
 
 Here's an example. The box around is made by [activeadmin](http://activeadmin.info/).

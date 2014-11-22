@@ -1,6 +1,6 @@
 module Aristotle
   class Command
-    attr_reader :action, :condition
+    attr_reader :action, :condition, :action_proc, :condition_proc
 
     def initialize(line, conditions, actions)
       @action, @condition = line.split(' if ', 2).map(&:strip)
