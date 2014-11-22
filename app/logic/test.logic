@@ -1,0 +1,25 @@
+Nothing matches
+  Go to a bar if this won't match
+  Do something else if nothing happens
+  Do a third thing if all hell breaks loose
+
+Things not defined
+  Go to a bar if this won't match
+  Do something else if this is not found anywhere
+  Do a third thing if all hell breaks loose
+
+Return on second
+  Return 1 if this won't match
+  Return 2 if this matches
+  Return 3 if this won't match
+
+Return only the first
+  Return 1 if this matches
+  Return 2 if this matches
+  Return 3 if this won't match
+
+Test payload
+  Return payload if this matches
+
+Test condition regexp
+  Return payload if this is a regexp condition
