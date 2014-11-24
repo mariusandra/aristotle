@@ -1,5 +1,9 @@
 # Aristotle
 
+[![Gem Version](https://badge.fury.io/rb/aristotle.svg)](http://badge.fury.io/rb/aristotle)
+[![Build Status](https://travis-ci.org/apprentus/aristotle.svg)](https://travis-ci.org/apprentus/aristotle)
+[![Code Climate](https://codeclimate.com/github/apprentus/aristotle/badges/gpa.svg)](https://codeclimate.com/github/apprentus/aristotle)
+
 Aristotle is a simple business logic engine for Ruby. It's design goal is to stop clients from asking
 "How does this work?" and "Why does this happen?".
 
