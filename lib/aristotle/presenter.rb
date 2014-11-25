@@ -9,7 +9,7 @@ module Aristotle
         "<strong>#{command_title}</strong>"+
             "<ul>"+
             commands.map do |command|
-              "<li>- "+
+              "<li>"+
                   format_fragment(command, :action, show_code: show_code)+
                   " <strong style='color:blue'>IF</strong> "+
                   format_fragment(command, :condition, show_code: show_code)+
