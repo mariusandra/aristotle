@@ -16,25 +16,25 @@ module Aristotle
 
     def self.commands(logic_method = nil)
       load_commands
-      logic_method.nil? ? @@commands : (@@commands[logic_method] || [])
+      logic_method.nil? ? @commands : (@commands[logic_method] || [])
     end
 
     # called when class is loaded
     def self.condition(expression, &block)
-      @@conditions ||= {}
-      @@conditions[expression] = block
+      @conditions ||= {}
+      @conditions[expression] = block
     end
 
     # called when class is loaded
     def self.action(expression, &block)
-      @@actions ||= {}
-      @@actions[expression] = block
+      @actions ||= {}
+      @actions[expression] = block
     end
 
     def self.load_commands
-      @@commands ||= {}
+      @commands ||= {}
 
-      return if @@commands != {}
+      return if @commands != {}
 
       filename = "app/logic/#{logic_name}.logic"
       logic_data = File.read(filename)
@@ -46,8 +46,8 @@ module Aristotle
         if line.start_with? '  '
           raise "#{filename} is broken!" if command.nil?
 
-          @@commands[command] ||= []
-          @@commands[command] << Aristotle::Command.new(line.strip, @@conditions, @@actions)
+          @commands[command] ||= []
+          @commands[command] << Aristotle::Command.new(line.strip, @conditions || {}, @actions || {})
         else
           command = line
         end
