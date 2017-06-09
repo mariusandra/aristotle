@@ -63,5 +63,10 @@ class AristotleTest < Minitest::Test
     assert_equal 'payload', test_logic.process('Test payload')
 
     assert_equal 'regexp', test_logic.process('Test condition regexp')
+
+    returned_command = test_logic.process('Test condition regexp', return_command: true)
+    assert returned_command.is_a?(Aristotle::Command)
+    assert_equal 'Return payload', returned_command.action
+    assert_equal 'this is a regexp condition', returned_command.condition
   end
 end

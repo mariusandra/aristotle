@@ -4,11 +4,13 @@ module Aristotle
       @object = object
     end
 
-    def process(logic_method)
+    def process(logic_method, return_command: false)
       self.class.commands(logic_method).each do |command|
         next unless command.condition_passes_with?(@object)
 
-        return command.do_action_with(@object)
+        return_value = command.do_action_with(@object)
+
+        return return_command ? command : return_value
       end
 
       nil

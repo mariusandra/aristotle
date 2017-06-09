@@ -1,7 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'aristotle'
-  s.version     = '0.2.4'
-  s.date        = '2014-11-25'
+  s.version     = '0.3.0'
   s.summary     = 'Business logic'
   s.description = 'Ruby business logic engine, inspired by Cucumber'
   s.authors     = ['Marius Andra']

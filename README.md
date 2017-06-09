@@ -100,6 +100,13 @@ class Request < ActiveRecord::Base
   def update_state
     RequestLogic.new(self).process 'Update the request state'
   end
+
+  def update_state_and_get_what_i_just_did
+    command = RequestLogic.new(self).process('Update the request state', return_command: true)
+    command.action == 'the action that was performed'
+    command.condition == 'the condition that matched'
+  end
+
 end
 ```
 
